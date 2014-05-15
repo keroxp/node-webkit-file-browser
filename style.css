@@ -1,0 +1,12 @@
+#app li{
+  cursor: pointer;
+}
+
+.directory-item{
+  color: blue;
+  text-decoration: underline;;
+}
+
+.file-item {
+  color: green;
+}

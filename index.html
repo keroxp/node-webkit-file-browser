@@ -1,0 +1,41 @@
+<!doctype html>
+<html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Yet Another File Broweser</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        <!-- build:css(.tmp) styles/main.css -->
+        <link rel="stylesheet" href="./style.css">
+        <!-- endbuild -->
+        <!-- build:js scripts/vendor/modernizr.js -->
+        <script type="text/template" id="file-view-template">
+            <div class="<%= getClasses() %>" data-path="<%= get('path') %>">
+                <%= getDisplayName() %>
+            </div>
+        </script>
+        <!-- endbuild -->
+    </head>
+    <body>
+        <!--[if lt IE 10]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <div id="content" class="">
+            <!-- ファイルブラウザ -->
+            <button id="file-input-button">フォルダを選択</button>
+            <input style="display:none;" id="file-input" type="file" value="フォルダを選択" webkitDirectory directory/>
+            <ul id="app" class="directory_view">
+            </ul>
+        </div>
+        <!-- build:js scripts/vendor.js -->
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore-min.js"></script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.1.2/backbone-min.js"></script>
+        <script src="./app.js"></script>
+        <!-- endbuild -->
+        <!-- build:js({.tmp,app}) scripts/main.js -->
+        <!-- endbuild -->
+</body>
+</html>
